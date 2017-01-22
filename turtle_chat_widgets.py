@@ -10,7 +10,7 @@ class Button(metaclass=ABCMeta):
     def __init__(self,my_turtle=None,shape=None,pos=(0,0)):
         '''
         Initialize Button object.  The button will be given an onclick
-        listener that triggers the abstract method, fun.
+        listener that triggers the implementation of the abstract method, fun.
 
         :param my_turtle: turtle object which, when clicked, will trigger
                             the action specified in the fun method.
@@ -51,9 +51,9 @@ class Button(metaclass=ABCMeta):
         Abstract method whose implementation is called when
         button gets pressed.  Must be implemented in concrete subclasses.
 
-        :param x: horizontal coordinate of click [int, pixels] (required for onclick)
+        :param x: integer, horizontal coordinate of click in pixels (required for onclick)
                   Default=None
-        :param y: vertical coordinate of click [int, pixels] (required for onclick)
+        :param y: integer, vertical coordinate of click in pixels (required for onclick)
                   Default=None
         '''
         pass
@@ -72,8 +72,9 @@ class TextInput(metaclass=ABCMeta):
         :param width: integer, width of box (pixels).  Default=200 pixels.
         :param height: integer, height of box (pixels).  Default=100 pixels.
         :param pos: tuple, (x,y) - textbox location on screen.  Default=(0,0)
-        :param background_gif: background gif image for textbox - can be
-                               used in draw_box, though not required.  Default=None.
+        :param background_gif: string, name of background gif image for textbox
+                               - can be used in draw_box, though not required.
+                               Default=None.
         :param letters_per_line: integer, number of letters per line.
         '''
         self.width=width
