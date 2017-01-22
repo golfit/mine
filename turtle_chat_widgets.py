@@ -1,5 +1,4 @@
 import turtle
-from turtle_chat_client import Client
 from abc import ABCMeta,abstractmethod
 
 class Button(metaclass=ABCMeta):
